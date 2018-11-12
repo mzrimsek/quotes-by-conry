@@ -5,7 +5,7 @@ const handleResults = function (error, _options, response) {
     const rawQuotes = response.rows.slice(1); // ignore header row
     const quotes = rawQuotes.map(rawQuote => rawQuote.cellsArray[0]);
     const quote = quotes[Math.floor(Math.random() * quotes.length)];
-    $('body').append(`<div>${quote}</div>`);
+    $('body').append(`<div class="quote">${quote}</div>`);
   }
 }
 
